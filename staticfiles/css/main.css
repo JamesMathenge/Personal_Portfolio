@@ -1,0 +1,184 @@
+body {
+    background-image: radial-gradient(rgba(57, 210, 248, 1), rgba(48, 97, 96, 1));
+}
+
+/* --- Card Styles --- */
+.card {
+    background-color: #f8f9fa; /* light gray */
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.card-body h4 {
+    font-weight: 600;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.card-body p {
+    color: grey;
+    font-size: 0.95rem;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+/* --- Profile Image Styles --- */
+.profile-img {
+    width: 150px; /* Specific width for the initial profile image */
+    height: 150px; /* Specific height for the initial profile image */
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 15px auto;
+    border: 4px solid #fff; /* white border */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* subtle shadow */
+    transition: transform 0.3s ease; /* Transition for hover effect */
+}
+
+/* Override for a potentially different .profile-img usage */
+.profile-img[style*="width:100%"] { /* Targeting .profile-img when width is 100% */
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    height: auto; /* Allow height to adjust naturally */
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+}
+
+/* --- Certificate Image Styles --- */
+.certificate-img {
+    width: 100%;
+    border-radius: 8px;
+    border: 2px solid #eee;
+    transition: box-shadow 0.3s ease;
+}
+
+.certificate-img:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Section Title Styles --- */
+.section-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* --- Download Button Styles --- */
+.btn-download {
+    margin-top: 10px;
+}
+
+/* --- Project Card Styles --- */
+.project-card {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    background: #fff;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    text-align: center;
+}
+
+.project-card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: left 0.4s ease;
+    pointer-events: none;
+}
+
+.project-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.project-card:hover::after {
+    left: 0;
+
+}
+
+/* --- Equal Card Height Helper --- */
+.equal-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* --- Technology Icon Styles --- */
+.icon-tech {
+    height: 22px;
+    margin-right: 8px;
+    transition: transform 0.2s ease;
+}
+
+.icon-tech:hover {
+    transform: scale(1.2);
+}
+
+.tech-stack-row {
+    margin-top: 15px;
+    text-align: center;
+}
+
+/* --- Portfolio Gallery Layout --- */
+.portfolio-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+/* --- Social Links Styles --- */
+.social-links {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 4px;
+    background: #007bff;
+    transition: all 0.3s ease;
+    border: 1px solid #007bff;
+    font-size: 14px;
+}
+
+.social-link:hover {
+    text-decoration: none;
+    color: #fff;
+    background: #0056b3;
+    border-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.social-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 6px;
+    transition: transform 0.2s ease;
+}
+
+.social-link:hover .social-icon {
+    transform: scale(1.1);
+}
+
+.project-card a {
+    position: relative;
+    z-index: 10;
+}
+
